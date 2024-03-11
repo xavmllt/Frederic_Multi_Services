@@ -22,6 +22,9 @@ header{
     font-size: 25px;
     font-family: "Inria Sans", sans-serif;
 }
+.header__container span{
+    color: #767474;
+}
 .header__container ul{
     list-style-type: none;
     display: flex;
@@ -75,15 +78,6 @@ header{
     line-height: 1.5;
     font-family: Arial, Helvetica, sans-serif;
 }
-.presentation__text button{
-    width: 200px;
-    height: 30px;
-    margin-top: 50px;
-    background-color: rgb(95, 110, 116);
-    border: none;
-    color: #d1c4c4;
-    cursor: pointer;
-}
 .presentation__image img{
     width: 300px;
     height: 300px;
@@ -91,7 +85,6 @@ header{
 
 .services__container{
     padding-top: 50px;
-    /* background-color: #fff; */
 }
 .services__container h1{
     text-align: center;
@@ -119,11 +112,214 @@ header{
     flex-direction: column;
     justify-content: space-between;
 }
+.card:hover{
+    height: 260px;
+    transition: 1s;
+}
 .card .card__image img{
     width: 50px;
+}
+.card .card__button{
+    display: flex;
+    justify-content: center;
+}
+.card__button button{
+    width: 100px;
+    height: 25px;
+    background-color: rgb(95, 110, 116);
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 900;
 }
 .card .card__text{
     font-weight: 900;
     margin: 10px;
     font-size: 20px;
+}
+
+.choice__container{
+    background-color: #fff;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.choice__text{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    gap: 30px;
+    width: 40%;
+}
+.choice__text h1{
+    font-size: 35px;
+    font-family: "Madimi One", sans-serif;
+}
+.choice__text p{
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+.choice__cards{
+    margin-top: 50px;
+}
+.card1{
+    display: flex;
+    width: 200px;
+    height: 220px;
+    border-radius: 15px;
+    background: linear-gradient(-45deg, #fff, #d9d9d9, #e6f2ff, #646669);
+    padding: 15px;
+    margin-bottom: 50px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    color: #2f2b2b;
+    font-weight: bolder;
+    position: relative;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border: 1px solid #d3d3d3;
+}
+.card1:hover{
+    transform: rotateY(180deg);
+}
+.card1__front, .card1__back{
+    position: absolute;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+}
+.card1__front{
+    color: black;
+    font-size: 100px;
+}
+.card1__back{
+    color: white;
+    transform: rotateY(180deg);
+    text-align: center;
+    font-weight: 900;
+}
+
+footer{
+    flex-shrink: 0;
+    /* border-top: 1px dashed #000; */
+    /* background: #201f30; */
+    background: #443b3b;
+    color: #000000;
+    /* margin-top: 50px; */
+    /* height: 400px; */
+}
+footer h3{
+    font-weight: bolder;
+}
+img{
+    width: 20px;
+}
+
+.contenu-footer{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    font-size: 20px;
+    padding: 50px 0 100px;
+}
+
+.bloc{
+    width: 25%;
+    margin: 0 30px;
+}
+
+
+/* contact */
+.footer-contact h3, .footer-services h3, .footer-horaire h3, .footer-medias h3{
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+.footer-contact p{
+    padding: 5px;
+}
+
+
+/* services */
+.liste-services, .liste-horaires, .liste-medias{
+    list-style-type: none;
+}
+
+.liste-services li{
+    padding: 2px 0;
+}
+.liste-services ol, ul{
+    padding-left: 0rem; /* Enelever le padding de base de boostrap qui décaler les listes des titres */
+}
+
+.liste-services a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.liste-services a:hover{
+    text-decoration: none;
+    color: rgb(3, 3, 3);
+}
+
+/* medias */
+.liste-medias{
+    position: relative;
+    right: 10px;
+}
+
+.liste-medias img{
+    width: 20px;
+    margin: 10px 10px;
+}
+
+.liste-medias a{
+    text-decoration: none;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+}
+
+/* medias queries */
+@media screen and (max-width:1300px){
+    .contenu-footer{
+        width: 700px;
+        flex-wrap: wrap;
+    }
+    .bloc{
+        width: 40%;
+        margin: 0 0;
+    }
+    .bloc:nth-child(1), .bloc:nth-child(2){ /* permet de séléctionner des enfants dans une liste */
+        margin-bottom: 50px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .contenu-footer{
+        width: 320px;
+    }
+    .bloc{
+        width: 300px;
+        margin: 30px;
+    }
+    .bloc:nth-child(1), .bloc:nth-child(2){
+        margin-bottom: 30px;
+    }
+    .bloc:nth-child(1){
+        margin-top: 0;
+    }
+}
+
+#marque{
+    background-color: white;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: larger;
 }
