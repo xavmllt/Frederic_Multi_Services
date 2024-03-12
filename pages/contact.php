@@ -3,25 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="../css/contact.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <title>Fréderic Multi-Services - Contact</title>
 </head>
 <body>
-    <header>
-        <div class="header__container">
-            <h1><span>Fréd</span>eric Multi Services</h1>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="#">À propos</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Communaute</a></li>
-            </ul>
-            <a href="#"><button>Contact</button></a>
-        </div>
-    </header>
+    <?php include "../composants/navbar.php"?>
     <main>
         <section>
             <div class="title">
@@ -73,26 +63,6 @@
             </div>
         </section>
     </main>
-    <footer>
-        <div class="footer__container">
-            <div class="footer__title">
-                <h1><span>Fré</span>deric Multi Services</h1>
-            </div>
-            <div class="footer__list">
-                <ul>
-                    <li><a href="#">Police</a></li>
-                    <li><a href="#">Terms</a></li>
-                    <li><a href="#">Privacy</a></li>
-                </ul>
-            </div>
-            <div class="footer__list--logo">
-                <ul>
-                    <li><a href="#"><img src="facebook.png" alt="Facebook"></a></li>
-                    <li><a href="1"><img src="twitter.png" alt="Twitter"></a></li>
-                    <li><a href="#"><img src="instagram.png" alt="Instagram"></a></li>
-                </ul>
-            </div>
-        </div>
-    </footer>
+    <?php include "../composants/footer.php" ?>
 </body>
 </html>

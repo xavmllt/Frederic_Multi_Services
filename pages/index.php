@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
@@ -13,18 +13,9 @@
     <title>Fréderic - Multi Services</title>
 </head>
 <body>
-    <header>
-        <div class="header__container">
-            <h1><span>Fréd</span>eric Multi Services</h1>
-            <ul>
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="#">À propos</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Communaute</a></li>
-            </ul>
-            <a href="contact.html"><button>Contact</button></a>
-        </div>
-    </header>
+    <?php
+    include "../composants/navbar.php"; 
+    ?>
     <main>
         <section>
             <div class="presentation__container">
@@ -54,7 +45,7 @@
                     </script>
                 </div>
                 <div class="presentation__image">
-                    <img src="fredpfp.png" alt="photo">
+                    <img src="../assets/fredpfp.png" alt="photo">
                 </div>
             </div>
         </section>
@@ -66,26 +57,25 @@
                 </div>  
                 <div class="services__cards">
                     <div class="card">
-                        <div class="card__image"><img
-                            src="eclairLogo.png" alt="Éclair">
+                        <div class="card__image"><img src="../assets/eclairLogo.png" alt="Éclair">
                         </div>
                         <div class="card__button"><a href="#"><button>Voir plus</button></a>
                         </div>
                         <div class="card__text">Électricité</div>
                     </div>
                     <div class="card">
-                        <div class="card__image"><img src="plomberieLogo.png" alt="Plomberie"></div>
+                        <div class="card__image"><img src="../assets/plomberieLogo.png" alt="Plomberie"></div>
                         <div class="card__button"><a href="#"><button>Voir plus</button></a>
                         </div>
                         <div class="card__text">Plomberie</div>
                     </div>
                     <div class="card">
-                        <div class="card__image"><img src="maconnerieLogo.png" alt="Briques"></div>
+                        <div class="card__image"><img src="../assets/maconnerieLogo.png" alt="Briques"></div>
                         <div class="card__button"><a href="#"><button>Voir plus</button></a></div>
                         <div class="card__text">Maçonnerie</div>
                     </div>
                     <div class="card">
-                        <div class="card__image"><img src="montageLogo.png" alt="Meuble"></div>
+                        <div class="card__image"><img src="../assets/montageLogo.png" alt="Meuble"></div>
                         <div class="card__button"><a href="#"><button>Voir plus</button></a></div>
                         <div class="card__text">Montage</div>
                     </div>
@@ -119,7 +109,7 @@
                             </div>
                         </div>
                 </div>
-                <div class="choice__cards">
+                <div class="choice__cards choice__cards--wrap">
                     <div class="card1">
                         <div class="card1__front">
                             <p>?</p>
@@ -162,21 +152,21 @@
                 <h3>Mes horraires</h3>
                 <ul class="liste-horaires">
                   <!-- Demander les horraires en vue de modification-->
-                    <li>✅ &ensp;Lun 10h  -  19h</li>
-                    <li>✅ &ensp;Mar 10h  -  19h</li>
-                    <li>✅ &ensp;Mer 10h  -  19h</li>
-                    <li>✅ &ensp;Jeu 10h  -  19h</li>
-                    <li>✅ &ensp;Ven 10h  -  19h</li>
-                    <li>✅ &ensp;Sam fermé</li>
-                    <li>✅ &ensp;Dim fermé</li>
+                    <li>✅ &ensp;Lun 24H / 24H</li>
+                    <li>✅ &ensp;Mar 24H / 24H</li>
+                    <li>✅ &ensp;Mer 24H / 24H</li>
+                    <li>✅ &ensp;Jeu 24H / 24H</li>
+                    <li>✅ &ensp;Ven 24H / 24H</li>
+                    <li>✅ &ensp;Sam 24H / 24H</li>
+                    <li>✅ &ensp;Dim 24H / 24H</li>
                 </ul>
             </div>
             <div class="bloc footer-medias">
                 <h3>Mes réseaux</h3>
                 <ul class="liste-medias">
-                    <li><a href="#"><img src="/images/facebook.png" alt="facebook">&ensp; Facebook</a></li>
-                    <li><a href="#"><img src="/images/instagram.png" alt="instagram">&ensp; Instagram</a></li>
-                    <li><a href="#"><img src="/images/twitter.png" alt="twitter">&ensp; Twitter</a></li>
+                    <li><a href="#"><img src="../assets/facebook.png" alt="facebook">&ensp; Facebook</a></li>
+                    <li><a href="#"><img src="../assets/instagram.png" alt="instagram">&ensp; Instagram</a></li>
+                    <li><a href="#"><img src="../assets/twitter.png" alt="twitter">&ensp; Twitter</a></li>
                     <li><a href="#"><img src="youtube_4494485.png" alt="youtube">&ensp; Youtube</a></li>
                 </ul>
             </div>
