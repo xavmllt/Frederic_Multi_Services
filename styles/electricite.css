@@ -116,14 +116,30 @@ footer{
     padding: 20px;
     background-color: #fff;
 }
+
+.footer__container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+}
+footer h1{
+    font-size: 25px;
+    font-family: "Inria Sans", sans-serif;
+}
+footer span{
+    color: #767474;
+}
 footer img{
     width: 20px;
     height: 20px;
 }
-footer ul{
+footer a{
+    text-decoration: none;
+    color: #000;
+}
+.footer__container ul{
     display: flex;
-    align-items: center;
-    justify-content: center;
     list-style-type: none;
-    gap: 15px;
+    gap: 20px;
 }

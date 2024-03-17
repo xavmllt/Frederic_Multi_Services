@@ -3,19 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400..900&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Madimi+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <title>Fréderic - Multi Services</title>
+    <title>Fréderic Multi Service</title>
 </head>
 <body>
-    <?php
-    include "../composants/navbar.php"; 
-    ?>
+    <?php include "../components/header.php" ?>
     <main>
         <section>
             <div class="presentation__container">
@@ -29,14 +27,14 @@
                     <a href="#" class="suite">afficher la suite ...</a>
                     <script>
                         $(document).ready(function(){
-                            var $paragraphe2 = $('p:eq(3)');
-                            $paragraphe2.hide();
+                            var $paragraphe3 = $('p:eq(3)');
+                            $paragraphe3.hide();
                             $('a.suite').on("click", function(){
-                                if($paragraphe2.is(':hidden')){
-                                    $paragraphe2.show('slow');
+                                if($paragraphe3.is(':hidden')){
+                                    $paragraphe3.show('slow');
                                     $(this).text('masquer la suite...');
                                 }else{
-                                    $paragraphe2.hide("slow");
+                                    $paragraphe3.hide("slow");
                                     $(this).text("afficher la suite...");
                                     return false;
                                 }
@@ -45,38 +43,38 @@
                     </script>
                 </div>
                 <div class="presentation__image">
-                    <img src="../assets/fredpfp.png" alt="photo">
+                    <img src="../assets/frederic/fredpfp.png" alt="Fréderic">
                 </div>
             </div>
         </section>
         <section>
-            <div class="services__container">
+            <div class="services__container" id="services__ancre">
                 <div class="services__text">
                     <h1>Mes services</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+                    <p>Des services de hautes qualités !</p>
                 </div>  
                 <div class="services__cards">
                     <div class="card">
-                        <div class="card__image"><img src="../assets/eclairLogo.png" alt="Éclair">
+                        <div class="card__image"><img src="../assets/icones/ampoule.png" alt="Ampoule">
                         </div>
-                        <div class="card__button"><a href="#"><button>Voir plus</button></a>
+                        <div class="card__button"><a href="../pages/electricite.php"><button>Voir plus</button></a>
                         </div>
                         <div class="card__text">Électricité</div>
                     </div>
                     <div class="card">
-                        <div class="card__image"><img src="../assets/plomberieLogo.png" alt="Plomberie"></div>
-                        <div class="card__button"><a href="#"><button>Voir plus</button></a>
+                        <div class="card__image"><img src="../assets/icones/CleAMolette.png" alt="Clé à molette"></div>
+                        <div class="card__button"><a href="../pages/plomberie.php"><button>Voir plus</button></a>
                         </div>
                         <div class="card__text">Plomberie</div>
                     </div>
                     <div class="card">
-                        <div class="card__image"><img src="../assets/maconnerieLogo.png" alt="Briques"></div>
-                        <div class="card__button"><a href="#"><button>Voir plus</button></a></div>
+                        <div class="card__image"><img src="../assets/icones/briques.png" alt="Briques"></div>
+                        <div class="card__button"><a href="../pages/maconnerie.php"><button>Voir plus</button></a></div>
                         <div class="card__text">Maçonnerie</div>
                     </div>
                     <div class="card">
-                        <div class="card__image"><img src="../assets/montageLogo.png" alt="Meuble"></div>
-                        <div class="card__button"><a href="#"><button>Voir plus</button></a></div>
+                        <div class="card__image"><img src="../assets/icones/iconeMontage.png" alt="Meuble"></div>
+                        <div class="card__button"><a href="../pages/montage.php"><button>Voir plus</button></a></div>
                         <div class="card__text">Montage</div>
                     </div>
                 </div>     
@@ -85,7 +83,7 @@
         <section>
             <div class="choice__container">
                 <div class="choice__text">
-                    <h1>Pourquoi Choisir Multi-Services</h1>
+                    <h1>Pourquoi Choisir Multi-Service</h1>
                     <p>Multi-Services vous accompagne de A à Z pour tout vos projets !</p>
                 </div>
                 <div class="choice__cards">
@@ -124,7 +122,16 @@
         </section>
         <section>
             <div class="devis__container">
-                <h1>Multi-Services vous propose votre devis en ligne !</h1>
+                <div class="devis__button">
+                    <a href="#"><button>CLIQUEZ</button></a>
+                    <p>OU</p>
+                    <a href="#"><button>TÉLÉCHARGER</button></a>
+                </div>
+                <div class="devis__title">
+                    <h1>Votre devis en quelque clics !</h1>
+                    <p>Devis en ligne ou devis papier ?</p>
+                    <p>C'est vous qui choissisez !</p>
+                </div>
             </div>
         </section>
     </main>
@@ -133,25 +140,23 @@
             <div class="bloc footer-services">
                 <h3>Mes services</h3>
                 <ul class="liste-services">
-                    <li><a href="#">Electricité</a></li>
-                    <li><a href="#">Plomberie</a></li>
-                    <li><a href="#">Montage de meubles</a></li>
-                    <li><a href="#">Maçonnerie</a></li>
+                    <li><a href="../pages/electricite.php">Electricité</a></li>
+                    <li><a href="../pages/plomberie.php">Plomberie</a></li>  
+                    <li><a href="../pages/maconnerie.php">Maçonnerie</a></li>
+                    <li><a href="../pages/montage.php">Montage</a></li>
                 </ul>
             </div>
             <div class="bloc footer-contact">
-                <h3>Contactez-moi</h3>
-              <!-- Mettre le numéro PRO si il y en a un sinon non -->
-                <p>10-10-10-10-10</p>
-                <p>supportclient@contact.com</p>
-                <p>Orléans</p>
-                <p>Chartres</p>
-                <p>Paris</p>
+                <h3>Je me déplace</h3>
+                <p>Eure-et-Loire (28)</p>
+                <p>Loiret (45)</p>
+                <p>Eure (27)</p>
+                <p>Département de Paris (75)</p>
+                <p>Île-de-France</p>
             </div>
             <div class="bloc footer-horaire">
                 <h3>Mes horraires</h3>
                 <ul class="liste-horaires">
-                  <!-- Demander les horraires en vue de modification-->
                     <li>✅ &ensp;Lun 24H / 24H</li>
                     <li>✅ &ensp;Mar 24H / 24H</li>
                     <li>✅ &ensp;Mer 24H / 24H</li>
@@ -164,14 +169,13 @@
             <div class="bloc footer-medias">
                 <h3>Mes réseaux</h3>
                 <ul class="liste-medias">
-                    <li><a href="#"><img src="../assets/facebook.png" alt="facebook">&ensp; Facebook</a></li>
-                    <li><a href="#"><img src="../assets/instagram.png" alt="instagram">&ensp; Instagram</a></li>
-                    <li><a href="#"><img src="../assets/twitter.png" alt="twitter">&ensp; Twitter</a></li>
-                    <li><a href="#"><img src="youtube_4494485.png" alt="youtube">&ensp; Youtube</a></li>
+                    <li><a href="#"><img src="../assets/icones/facebook.png" alt="facebook">&ensp; Facebook</a></li>
+                    <li><a href="#"><img src="../assets/icones/instagram.png" alt="instagram">&ensp; Instagram</a></li>
+                    <li><a href="https://www.allovoisins.com/p/fredericmultiservice" target="_blank"><img src="../assets/icones/alloVoisin.png" alt="Allo Voisin">&ensp; AlloVoisins</a></li>
                 </ul>
             </div>
         </div>
-        <div id="marque">&copy;F Multi Services Tout Droits Réservés</div>
+        <div id="marque">&copy;Fréderic Multi Service - <a href="#">Tout Droits Réservés</a></div>
     </footer>
 </body>
 </html>

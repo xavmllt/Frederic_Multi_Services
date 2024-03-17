@@ -2,10 +2,15 @@
     margin: 0;
     padding: 0;
 }
+html{
+    scroll-behavior: smooth;
+}
 body {
-    background: linear-gradient(-45deg, #fff, #d9d9d9, #e6f2ff, #646669);
+    background: linear-gradient(-45deg, #fff, #a69b9b, #9a9c9f, #828a92);
+    /* background: linear-gradient(-45deg, #fff, #d9d9d9, #e6f2ff, #646669); */
     background-size: 400% 400%;
     height: 100vh;
+    opacity: 0.8;
 }
 
 header{
@@ -36,6 +41,10 @@ header{
     text-decoration: none;
     font-weight: 700;
     font-family: "Maven Pro", sans-serif;
+}
+
+.header__container .membre{
+    background-color: rgb(95, 110, 116);
 }
 .header__container button{
     width: 110px;
@@ -77,7 +86,7 @@ header{
 } 
 .presentation__text p{
     line-height: 1.5;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "IBM Plex Sans", sans-serif;
 }
 .presentation__image img{
     width: 300px;
@@ -93,6 +102,8 @@ header{
 } 
 .services__container p{
     text-align: center;
+    font-family: "IBM Plex Sans", sans-serif;
+    padding: 10px;
 } 
 .services__cards{
     display: flex;
@@ -118,7 +129,8 @@ header{
     transition: 1s;
 }
 .card .card__image img{
-    width: 50px;
+    width: 45px;
+    height: 45px;
 }
 .card .card__button{
     display: flex;
@@ -204,14 +216,49 @@ header{
     font-weight: 900;
 }
 
+.devis__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-family: "IBM Plex Sans", sans-serif;
+    height: 600px;
+    
+}
+.devis__button{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 50px;
+    margin: 20px;
+}
+.devis__button p{
+    font-weight: 900;
+}
+.devis__button button{
+    width: 110px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: rgb(95, 110, 116);
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-weight: 900;
+}
+.devis__title h1{
+    font-size: 35px;
+    font-family: "Madimi One", sans-serif;
+}
+.devis__title{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-direction: column;
+}
 footer{
-    flex-shrink: 0;
-    /* border-top: 1px dashed #000; */
-    /* background: #201f30; */
-    background: #443b3b;
     color: #000000;
-    /* margin-top: 50px; */
-    /* height: 400px; */
+    background: linear-gradient(-45deg, #fff, #a3a0a0, #aebac7, #7a7c82);
 }
 footer h3{
     font-weight: bolder;
@@ -235,41 +282,32 @@ img{
     margin: 0 30px;
 }
 
-
-/* contact */
 .footer-contact h3, .footer-services h3, .footer-horaire h3, .footer-medias h3{
     font-size: 20px;
     padding-bottom: 20px;
 }
 
-.footer-contact p{
+.footer-contact p,a{
     padding: 5px;
 }
 
-
-/* services */
 .liste-services, .liste-horaires, .liste-medias{
     list-style-type: none;
 }
 
 .liste-services li{
-    padding: 2px 0;
+    padding: 10px 0;
 }
-.liste-services ol, ul{
-    padding-left: 0rem; /* Enelever le padding de base de boostrap qui décaler les listes des titres */
-}
-
 .liste-services a{
-    text-decoration: none;
+    text-decoration: underline;
     color: #000000;
 }
-
 .liste-services a:hover{
     text-decoration: none;
     color: rgb(3, 3, 3);
+    cursor: pointer;
 }
 
-/* medias */
 .liste-medias{
     position: relative;
     right: 10px;
@@ -289,11 +327,15 @@ img{
 }
 
 #marque{
+    border-top: 2px solid #000;
     background-color: white;
     text-align: center;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: larger;
+    padding: 15px;
 }
+
+
 /* medias queries */
 @media screen and (max-width: 700px){
     .presentation__image{
