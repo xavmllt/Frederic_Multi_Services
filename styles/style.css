@@ -222,6 +222,7 @@ header{
     justify-content: space-around;
     font-family: "IBM Plex Sans", sans-serif;
     height: 600px;
+    flex-wrap: wrap;
     
 }
 .devis__button{
@@ -248,6 +249,7 @@ header{
 .devis__title h1{
     font-size: 35px;
     font-family: "Madimi One", sans-serif;
+    text-align: center;
 }
 .devis__title{
     display: flex;
@@ -256,6 +258,45 @@ header{
     gap: 50px;
     flex-direction: column;
 }
+
+.customer__container{
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.customer__title{
+    padding-top: 50px;
+}
+.customer__container h1{
+    font-size: 45px;
+    font-weight: 500;
+    text-align: center;
+}
+.customer__container p, a:visited{
+    text-align: center;
+    font-family: "IBM Plex Sans", sans-serif;
+    padding: 20px;
+    text-decoration: none;
+    color: #000;
+}
+.customer__photo{
+    display: flex;
+    gap: 100px;
+    margin: 100px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+.customer__photo img{
+    width: 600px;
+    height: 300px;
+    zoom: 0.7;
+    border: 5px dotted #000;
+    padding: 5px;
+}
+
 footer{
     color: #000000;
     background: linear-gradient(-45deg, #fff, #a3a0a0, #aebac7, #7a7c82);
@@ -263,7 +304,7 @@ footer{
 footer h3{
     font-weight: bolder;
 }
-img{
+footer img{
     width: 20px;
 }
 
@@ -325,6 +366,11 @@ img{
     align-items: center;
     font-size: 25px;
 }
+.liste-medias a[href="contact.php"]{
+    text-decoration: underline;
+    padding: 10px;
+    color: #0000FF;
+}
 
 #marque{
     border-top: 2px solid #000;
@@ -351,6 +397,13 @@ img{
     .header__container ul{
         display: none;
     }
+}
+@media screen and (max-width: 485px){
+.choice__cards{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 }
 @media screen and (max-width:1300px){
     .contenu-footer{

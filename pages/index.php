@@ -134,6 +134,18 @@
                 </div>
             </div>
         </section>
+        <section>
+            <div class="customer__container">
+                <div class="customer__title">
+                <h1>Des clients toujours satisfaits !</h1>
+                <p>Notez à plus de 4,6 ⭐️ sur <a href="https://www.allovoisins.com/p/fredericmultiservice" target="_blank">AlloVoisins</a></p>
+                </div>
+                <div class="customer__photo">
+                    <img src="../assets/note.png" alt="Note AlloVoisins">
+                    <img src="../assets/avis.png" alt="Avis AlloVoisins">
+                </div>
+            </div>
+        </section>
     </main>
     <footer>
         <div class="contenu-footer">
@@ -172,6 +184,7 @@
                     <li><a href="#"><img src="../assets/icones/facebook.png" alt="facebook">&ensp; Facebook</a></li>
                     <li><a href="#"><img src="../assets/icones/instagram.png" alt="instagram">&ensp; Instagram</a></li>
                     <li><a href="https://www.allovoisins.com/p/fredericmultiservice" target="_blank"><img src="../assets/icones/alloVoisin.png" alt="Allo Voisin">&ensp; AlloVoisins</a></li>
+                    <a href="contact.php">contact</a> <!-- À ajouter ici car pas de lien en mode tel -->
                 </ul>
             </div>
         </div>
