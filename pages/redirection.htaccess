@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteRule ^$ /vf3/pages/index.php [L]
+RewriteCond %{REQUEST_URI} !^/vf3/pages/
+RewriteRule ^(.*)$ /vf3/pages/$1 [L]
