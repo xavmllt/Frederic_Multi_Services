@@ -37,7 +37,7 @@
                         </div>
                     </div>
                 </div>
-                    <form action="">
+                    <form action="../data/form.php" method="post">
                         <div class="form__nomEmail">
                             <div class="form__nom">
                                 <label for="nom">Votre nom</label>

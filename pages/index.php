@@ -19,7 +19,7 @@
             <div class="presentation__container">
                 <div class="presentation__text">
                     <h2>Des services personnalisés !</h2>
-                    <p class="presentation__text--nom">Fréderic Maillot</p>
+                    <p class="presentation__text--nom">Fréderic <!-- Maillot --></p>
                     <p>Bonjour et bienvenue ! Je m'appelle Frédéric, et je suis ravi de vous proposer mes services. À 45 ans, originaire de La Réunion, mon parcours professionnel est profondément influencé par ma culture et mes valeurs.</p>
                     <p>Issu d'une île riche en diversité culturelle, j'ai appris dès mon plus jeune âge l'importance du respect, de l'écoute et du travail acharné. Ces valeurs sont au cœur de tout ce que je fais, que ce soit dans mes interactions avec mes clients ou dans la qualité de mon travail.
                     </p>
@@ -43,7 +43,7 @@
                     </script>
                 </div>
                 <div class="presentation__image">
-                    <img src="../assets/frederic/fredpfp.png" alt="Fréderic">
+                    <!-- <img src="../assets/frederic/fredpfp.png" alt="Fréderic"> -->
                 </div>
             </div>
         </section>
