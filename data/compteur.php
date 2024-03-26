@@ -1,44 +1,57 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div class="content">
-        <h1>Compteur</h1>
-
 <?php
-if(file_exists("compteur.txt")){
-    if($id_file = fopen("compteur.txt", "r")){
-        flock($id_file, 1);
-        $nb = fread($id_file, 10);
-        $nb++;
-        fclose($id_file);
-    $id_file = fopen("compteur.txt", "w");
-    flock($id_file, 2);
-    fwrite($id_file, $nb);
-    flock($id_file, 3);
-    fclose($id_file);
-    }else{
-        echo "Fichier introuvable";
-    };
-}else{
-    $nb = 0;
-    $id_file = fopen("compteur.txt", "w");
-    fwrite($id_file, $nb);
-    fclose($id_file);
-};
-    echo "<table border=\"1\" style=\"font-size:2em;\">
-            <tr>
-                <td style = \"background-color:blue; color:white;\">Voici déjà </td>
-                <td style = \"font-size:1.2em; background-color:white; color:black;\">$nb </td>
-                <td style = \"background-color:red; color:white;\">Visite sur le site</td>
-            </tr>
-            </table>";
-?>
-    </div>
 
-</body>
-</html>
+// Chemin vers le fichier compteur
+$compteur_file = "compteur.txt";
+
+// Vérifier si le fichier existe
+if (file_exists($compteur_file)) {
+    // Ouvrir le fichier en lecture
+    if ($id_file = fopen($compteur_file, "r+")) {
+        flock($id_file, LOCK_EX); // Verrouillage exclusif du fichier
+
+        // Lire le contenu du fichier
+        $nb = fread($id_file, filesize($compteur_file));
+        $nb = intval($nb); // Convertir en entier
+
+        // Incrémenter le compteur
+        $nb++;
+
+        // Rembobiner le fichier au début pour écrire la nouvelle valeur
+        rewind($id_file);
+
+        // Écrire la nouvelle valeur du compteur dans le fichier
+        fwrite($id_file, $nb);
+
+        fclose($id_file); // Fermer le fichier
+
+        // Envoyer le compteur au serveur Discord
+        $webhook_url = "https://discord.com/api/webhooks/1221704050848829440/a2BNmxh14J1ah45n-OSXklYMSyL1SfH0O2HZEI2ro1Pdo4PDANbcbqCK_lQitykxQIUV";
+        $data = array(
+            'content' => "Le compteur est maintenant à : " . $nb
+        );
+
+        $options = array(
+            'http' => array(
+                'header'  => "Content-type: application/json",
+                'method'  => 'POST',
+                'content' => json_encode($data)
+            )
+        );
+
+        $context  = stream_context_create($options);
+        $result = file_get_contents($webhook_url, false, $context);
+
+        if ($result === FALSE) {
+            // Gestion des erreurs si l'envoi échoue
+            echo "Erreur lors de l'envoi du compteur au serveur Discord";
+        }
+    } else {
+        echo "Fichier introuvable";
+    }
+} else {
+    $nb = 1; // Initialiser le compteur à 1 s'il n'existe pas encore
+    // Créer le fichier et écrire la valeur initiale du compteur
+    file_put_contents($compteur_file, $nb);
+}
+
+?>

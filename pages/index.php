@@ -13,18 +13,19 @@
     <title>Fréderic Multi Service</title>
 </head>
 <body>
+    <?php include "../data/compteur.php" ?>
     <?php include "../components/header.php" ?>
     <main>
         <section>
             <div class="presentation__container">
                 <div class="presentation__text">
                     <h2>Des services personnalisés !</h2>
-                    <p class="presentation__text--nom">Fréderic <!-- Maillot --></p>
+                    <p class="presentation__text--nom">Fréderic Maillot</p>
                     <p>Bonjour et bienvenue ! Je m'appelle Frédéric, et je suis ravi de vous proposer mes services. À 45 ans, originaire de La Réunion, mon parcours professionnel est profondément influencé par ma culture et mes valeurs.</p>
                     <p>Issu d'une île riche en diversité culturelle, j'ai appris dès mon plus jeune âge l'importance du respect, de l'écoute et du travail acharné. Ces valeurs sont au cœur de tout ce que je fais, que ce soit dans mes interactions avec mes clients ou dans la qualité de mon travail.
                     </p>
                     <p>En tant que professionnel expérimenté, je m'engage à fournir des services de première qualité, alliant expertise technique et sensibilité culturelle. Je suis là pour répondre à vos besoins avec précision et fiabilité.</p>
-                    <a href="#" class="suite">afficher la suite ...</a>
+                    <a href="#" class="suite">afficher la suite...</a>
                     <script>
                         $(document).ready(function(){
                             var $paragraphe3 = $('p:eq(3)');
@@ -43,7 +44,7 @@
                     </script>
                 </div>
                 <div class="presentation__image">
-                    <!-- <img src="../assets/frederic/fredpfp.png" alt="Fréderic"> -->
+                    <img src="../assets/frederic/fredpfp.png" alt="Fréderic"> 
                 </div>
             </div>
         </section>
