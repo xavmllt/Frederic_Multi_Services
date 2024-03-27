@@ -19,22 +19,26 @@
         <section>
             <div class="presentation__container">
                 <div class="presentation__text">
-                    <h2>Des services personnalisés !</h2>
+                    <h2>Bonjour et bienvenue !</h2>
                     <p class="presentation__text--nom">Fréderic Maillot</p>
-                    <p>Bonjour et bienvenue ! Je m'appelle Frédéric, et je suis ravi de vous proposer mes services. À 45 ans, originaire de La Réunion, mon parcours professionnel est profondément influencé par ma culture et mes valeurs.</p>
+                    <h3>Des services personnalisés !</h3>
+                    <p>Je m'appelle Frédéric, et je suis ravi de vous proposer mes services. À 45 ans, originaire de La Réunion, mon parcours professionnel est profondément influencé par ma culture et mes valeurs.</p>
                     <p>Issu d'une île riche en diversité culturelle, j'ai appris dès mon plus jeune âge l'importance du respect, de l'écoute et du travail acharné. Ces valeurs sont au cœur de tout ce que je fais, que ce soit dans mes interactions avec mes clients ou dans la qualité de mon travail.
                     </p>
                     <p>En tant que professionnel expérimenté, je m'engage à fournir des services de première qualité, alliant expertise technique et sensibilité culturelle. Je suis là pour répondre à vos besoins avec précision et fiabilité.</p>
                     <a href="#" class="suite">afficher la suite...</a>
                     <script>
                         $(document).ready(function(){
+                            var $paragraphe2 = $('p:eq(2)');
                             var $paragraphe3 = $('p:eq(3)');
-                            $paragraphe3.hide();
+                            $paragraphe3.hide() && $paragraphe2.hide();
                             $('a.suite').on("click", function(){
-                                if($paragraphe3.is(':hidden')){
+                                if($paragraphe3.is(':hidden') && $paragraphe2.is(':hidden')){
+                                    $paragraphe2.show('slow');
                                     $paragraphe3.show('slow');
-                                    $(this).text('masquer la suite...');
+                                    $(this).text('masquer...');
                                 }else{
+                                    $paragraphe2.hide('slow');
                                     $paragraphe3.hide("slow");
                                     $(this).text("afficher la suite...");
                                     return false;
@@ -84,8 +88,8 @@
         <section>
             <div class="choice__container">
                 <div class="choice__text">
-                    <h1>Pourquoi Choisir Multi-Service</h1>
-                    <p>Multi-Services vous accompagne de A à Z pour tout vos projets !</p>
+                    <h1>Pourquoi Choisir Multi Service</h1>
+                    <p>Multi Service vous accompagne de A à Z pour tout vos projets !</p>
                 </div>
                 <div class="choice__cards">
                         <div class="card1">
@@ -124,14 +128,15 @@
         <section>
             <div class="devis__container">
                 <div class="devis__button">
-                    <a href="#"><button>CLIQUEZ</button></a>
+                    <a href="#"><button>INSCRIPTION</button></a>
                     <p>OU</p>
-                    <a href="#"><button>TÉLÉCHARGER</button></a>
+                    <a href="#"><button>CONNEXION</button></a>
                 </div>
                 <div class="devis__title">
-                    <h1>Votre devis en quelque clics !</h1>
-                    <p>Devis en ligne ou devis papier ?</p>
-                    <p>C'est vous qui choissisez !</p>
+                    <h1>NOUVEAU !</h1>
+                    <h1>Votre espace client !</h1>
+                    <p>Plusieurs avantages à venir !</p>
+                    <p>Restez connecter</p>
                 </div>
             </div>
         </section>

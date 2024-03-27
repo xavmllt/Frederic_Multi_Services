@@ -1,3 +1,40 @@
+<?php
+$servname = "localhost";
+$user = "root";
+$password = "root";
+
+// connexion au server
+$connexion = mysqli_connect($servname, $user, $password);
+if(!$connexion){
+    die("La connexion à échoué ".mysqli_connect_error());
+};
+
+// connexion bdd
+$db_name = "multi_service";
+$cnx = mysqli_connect($servname, $user, $password, $db_name);
+if(mysqli_connect_errno()){
+    echo 'Erreur de connection à la base '.mysqli_connect_error();
+    exit();
+};
+
+// on récupère les données du formulaire
+@$nom = $_POST['nom'];
+@$email = $_POST['email'];
+@$object = $_POST['subject'];
+@$messgae = $_POST['message'];
+
+// on créer la requête SQL
+$sql = "INSERT INTO user (nom, email, objet, message) VALUES ('$nom', '$email', '$object', '$messgae')";
+
+// on verifie si la reqêute a foncionner
+$result = mysqli_query($cnx, $sql);
+if(!$result){
+    echo "Un problème est survenue";
+};
+
+mysqli_close($cnx);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,21 +52,21 @@
     <main>
         <section>
             <div class="title">
-                <h1>Restons en contact</h1>
+                <h1>Demande personnalisée</h1>
             </div>
             <div class="form__container">
                 <div class="form__information">
                     <div class="form__info">
                         <h2>Information de contact</h2>
-                        <p>Veuillez privilégier le formulaire pour les petites demandes</p>
+                        <p>Toutes les demandes seront étudiées personnelement</p>
                     </div>
                     <div class="form__information--contact">
                         <div class="information__tel">
                             <img src="../assets/icones/iconeTel.png" alt="Icône téléphone">
-                            <p>00000</p>
+                            <p>...</p>
                         </div>
                         <div class="information__email">
-                            <img src="../assets/icones/iconeMail.png" alt="">jeanjean@free.fr
+                            <img src="../assets/icones/iconeMail.png" alt="">...
                         </div>
                         <div class="information__lieux">
                             <img src="../assets/icones/lieux.png" alt="Icône lieux">
@@ -37,7 +74,7 @@
                         </div>
                     </div>
                 </div>
-                    <form action="../data/form.php" method="post">
+                    <form method="post">
                         <div class="form__nomEmail">
                             <div class="form__nom">
                                 <label for="nom">Votre nom</label>
@@ -57,7 +94,7 @@
                             <textarea name="message" id="message" cols="30" rows="10" placeholder="Écrivez votre message ici"></textarea>
                         </div>
                         <div class="form__submit">
-                            <input type="submit" value="Envoyer mon message">
+                            <input type="submit" value="Envoyer mon message" id="submit">
                         </div>
                     </form>
             </div>

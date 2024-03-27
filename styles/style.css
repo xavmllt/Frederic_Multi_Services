@@ -7,7 +7,6 @@ html{
 }
 body {
     background: linear-gradient(-45deg, #fff, #a69b9b, #9a9c9f, #828a92);
-    /* background: linear-gradient(-45deg, #fff, #d9d9d9, #e6f2ff, #646669); */
     background-size: 400% 400%;
     height: 100vh;
     opacity: 0.8;
@@ -85,6 +84,7 @@ header{
     font-weight: 400;
 } 
 .presentation__text p{
+    margin-top: 20px;
     line-height: 1.5;
     font-family: "IBM Plex Sans", sans-serif;
 }
