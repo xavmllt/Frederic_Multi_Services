@@ -30,11 +30,12 @@ if(isset($_GET['id']) AND !empty($_GET['id'])) {
     <title>Message privé</title>
 </head>
 <body>
-    <form action="" method="post">
-        <textarea name="message"></textarea>
-        <br><br>
-        <input type="submit" names="envoyer">
-    </form>
+<form action="" method="post">
+    <textarea name="message"></textarea>
+    <br><br>
+    <input type="submit" name="envoyer">
+</form>
+
 
     <section id="message">
         <?php
